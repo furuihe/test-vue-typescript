@@ -77,7 +77,7 @@
     "postcss-loader": "~2.0.10",
     "pug": "^2.0.3",
     "pug-filters": "^3.1.0",
-    "pug-loader": "^1.1.5",
+    "pug-html-loader": "^1.1.5",
     "raw-loader": "~0.5.1",
     "remap-istanbul": "~0.10.1",
     "rimraf": "~2.6.2",

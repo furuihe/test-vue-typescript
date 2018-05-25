@@ -1,6 +1,6 @@
-# himysys-admin
+# {{ name }}
 
-> Admin for himysys
+> {{ description }}
 
 ## Build Setup
 

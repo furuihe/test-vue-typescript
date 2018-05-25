@@ -33,7 +33,7 @@ let config = {
     },
     {
       test: /\.pug$/,
-      loader: 'pug-loader'
+      loader: ['raw-loader', 'pug-html-loader']
     }]
   },
   plugins: [
