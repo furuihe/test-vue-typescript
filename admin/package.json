@@ -9,21 +9,21 @@
     "npm": ">=3"
   },
   "scripts": {
-    "build": "cross-env-shell NODE_ENV=production npm run clean && npm run lint && npm run test && npm run compile",
-    "ci:teamcity": "karma --env=tc start config/karma.coverage.js && npm run coverage:remap",
-    "ci:jenkins": "karma --env=jk start config/karma.coverage.js && npm run coverage:remap",
+    "build": "cross-env-shell NODE_ENV=production npm run clean && npm run lint && npm run compile",
+    "ci:teamcity": "karma --env=tc start build/karma.coverage.js && npm run coverage:remap",
+    "ci:jenkins": "karma --env=jk start build/karma.coverage.js && npm run coverage:remap",
     "clean": "rimraf dist && rimraf coverage",
-    "compile": "webpack --config config/webpack.config.prod.js",
+    "compile": "webpack --config build/webpack.config.prod.js",
     "coverage": "npm run coverage:run && npm run coverage:remap && npm run coverage:open",
     "coverage:open": "opn coverage/html-ts/index.html",
     "coverage:remap": "remap-istanbul -i coverage/json/coverage-final.json -o coverage/html-ts -t html",
-    "coverage:run": "cross-env NODE_ENV=development karma start config/karma.coverage.js",
-    "dev": "webpack-dev-server --config config/webpack.config.dev.js --hot --inline",
+    "coverage:run": "cross-env NODE_ENV=development karma start build/karma.coverage.js",
+    "dev": "webpack-dev-server --config build/webpack.config.dev.js --hot --inline",
     "lint": "tslint src/**/*.ts",
     "serve": "http-server dist/ -g -o",
-    "test": "cross-env NODE_ENV=development karma start config/karma.unit.js",
-    "test:debug": "cross-env NODE_ENV=development karma start config/karma.debug.js",
-    "test:watch": "cross-env NODE_ENV=development karma start config/karma.unit.js --singleRun=false --auto-watch"
+    "test": "cross-env NODE_ENV=development karma start build/karma.unit.js",
+    "test:debug": "cross-env NODE_ENV=development karma start build/karma.debug.js",
+    "test:watch": "cross-env NODE_ENV=development karma start build/karma.unit.js --singleRun=false --auto-watch"
   },
   "dependencies": {
     "axios": "~0.17.1",
