@@ -6,7 +6,7 @@ import bRow from 'bootstrap-vue/es/components/layout/row'
 import './home.scss'
 
 @Component({
-  template: require('./home.html'),
+  template: require('./home.pug'),
   components: {
     'b-container': bContainer,
     'b-col': bCol,

@@ -10,7 +10,7 @@ interface UserResponse {
 }
 
 @Component({
-  template: require('./list.html'),
+  template: require('./list.pug'),
   components: {
     'b-container': bContainer,
     'b-col': bCol,

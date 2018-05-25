@@ -32,11 +32,9 @@ let config = {
       loader: 'awesome-typescript-loader'
     },
     {
-      test: /\.html$/,
-      loader: 'raw-loader',
-      exclude: ['./src/index.html']
-    }
-    ]
+      test: /\.pug$/,
+      loader: 'pug-loader'
+    }]
   },
   plugins: [
     new NamedModulesPlugin(),

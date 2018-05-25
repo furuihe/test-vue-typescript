@@ -5,7 +5,7 @@ import bRow from 'bootstrap-vue/es/components/layout/row'
 import { Logger } from '../../util/log'
 
 @Component({
-  template: require('./about.html'),
+  template: require('./about.pug'),
   components: {
     'b-container': bContainer,
     'b-col': bCol,

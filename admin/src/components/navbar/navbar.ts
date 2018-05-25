@@ -9,7 +9,7 @@ import { Link } from './link'
 import { Logger } from '../../util/log'
 
 @Component({
-  template: require('./navbar.html'),
+  template: require('./navbar.pug'),
   components: {
     'b-collapse': bCollapse,
     'b-nav-item': bNavItem,
