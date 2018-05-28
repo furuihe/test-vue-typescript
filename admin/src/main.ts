@@ -5,7 +5,7 @@ import { createRouter } from './router'
 const navbarComponent = () => import('./components/navbar').then(({ NavbarComponent }) => NavbarComponent)
 // const navbarComponent = () => import(/* webpackChunkName: 'navbar' */'./components/navbar').then(({ NavbarComponent }) => NavbarComponent)
 
-import './sass/main.scss'
+import './styles/main.scss'
 
 if (process.env.ENV === 'development' && module.hot) {
   const navbarModuleId = './components/navbar'
